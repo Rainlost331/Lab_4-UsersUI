@@ -2,6 +2,7 @@ package ui.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -21,8 +22,10 @@ import com.topic2.android.notes.theme.rwGreen
                 .size(40.dp)
                 .background(rwGreen)
         )
-        Text(text = "Заголовок", maxLines = 1)
-        Text(text = "Содержимое", maxLines = 1)
+        Column(modifier = Modifier.weight(1f)) {
+            Text(text = "Заголовок", maxLines = 1)
+            Text(text = "Содержимое", maxLines = 1)
+        }
         Checkbox(
             checked = false,
             onCheckedChange = {},
